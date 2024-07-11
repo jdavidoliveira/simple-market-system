@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Supermercado</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sistema de Supermercado</h1>
+      <div class="checkout">
+        <input
+          type="text"
+          id="product-code"
+          placeholder="Insira o código do produto"
+        />
+        <button onclick="addProduct()">Adicionar produto</button>
+      </div>
+      <div class="cart">
+        <h2>Carrinho de compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+      </div>
+      <div class="payment">
+        <button onclick="finishPurchase()">Finalizar compra</button>
+        <input
+          type="text"
+          id="amount-paid"
+          placeholder="Coloque o valor pago"
+        />
+        <button onclick="calculateChange()">Calcular troco</button>
+        <p id="change"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
